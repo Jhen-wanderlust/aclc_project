@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/styleAdmin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Vue JS -->
+    <script src="js/vue.js"></script> 
+    <script src="libs/vue.js"></script>
+    <script src="libs/vue3-touch-events.js"></script>   
+    <!-- Vue Resource -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>  
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-database.js"></script>
+
+      <!-- jsdelivr cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+
+   <!-- unpkg -->
+   <script src="https://unpkg.com/vee-validate@<3.0.0"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- include the script -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/vue-draggable@1.0.9/lib/vue-draggable.js"></script>
+
+    <script src="js/changepass.js"></script>
+    <script src="js/adminorders.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/walkIn.js"></script>
+    <script src="js/whyUs.js"></script>
+     
+    <title>JhenyLyn Salon</title>
+   
+</head>
+<body>
+
+    <div id="main">
+        
+<!-------------------
+        NAVBAR
+-------------------->  
+
+          <nav style="overflow: hidden;">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo center">JhenyLyn Salon</a>
+              <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large">
+                <i id="hide" @click="animationsCon = true" class="btnn material-icons">menu</i>
+              </a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              </ul>
+            </div>
+          </nav>
+
+<!-------------------
+      SIDENAV
+-------------------->  
+
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpeg">
+              </div>
+              <a href="#user"><img v-if="animationsCon" class="circle animated rotateIn" src="img/logo.jpg"></a>
+              <br><br>
+            </div></li>
+            
+
+            <li v-for="link in links">
+              <a @click="changeContent" href="javascript:;" :id="link.id" v-if="animationsCon"  class="waves-effect links animated fadeInLeft">
+               <i  class="material-icons-two-tone" >{{ link.icon }}</i>
+                {{ link.title }}
+              </a>
+            </li>
+
+<!----Button For Closing The SideNav-->            
+            <span><a @click="animationsCon = false" class="sidenav-close" href="javascript:;"></a></span>  
+
+          </ul>
+          
+         
+        
+       <section class="content"> 
+        <br>
+
+          <services    :id="links[0].id"></services>
+          <adminorders :id="links[1].id"></adminorders>
+          <walkin      :id="links[2].id"> </walkin>
+          <changepass  :id="links[3].id"></changepass>
+           <whyus      :id="links[4].id"></whyus>
+         
+       </section> 
+
+    
+
+    </div>
+    <br>
+    <iframe src="https://www.standalonedeveloper.eu/jheny/jheny-salon/slider/carousel.html" width="100%" height="300px" scrolling="no" style="border:none;"></iframe>        
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>    
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+
+  
+  });
+  
+
+
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+     
+      animationsCon : false,
+              links : [
+                            {title : "Services", icon : "attach_money",id : "linkone"},
+                            {title : "Bookings", icon : "alarm",id : "linktwo"},
+                            {title : "Walk-In", icon : "directions_walk",id : "linkthree"},
+                            {title : "Set Password", icon : "password",id : "linkfive"},
+                            {title : "Stylist", icon : "assignment_ind",id : "app"},
+                            {title : "Logout", icon : "exit_to_app",id : "linkfour"}
+                      ],
+           
+
+     },
+
+    methods :
+     {
+        
+  
+
+        changeContent(event)
+         {
+
+          
+          // Close The NavBar 
+          document.getElementsByClassName('sidenav-close')[0].click();
+          
+          // Hide All The Components & Showing Only The Selected Component
+          clickedOption = event.srcElement.id;
+          
+          if (clickedOption == "linkfour"){
+
+            let confirmationOut = confirm('Would you like to logout?')
+              if (confirmationOut == true){
+                firebase.auth().signOut();
+                console.log('User signed out!');
+              }else{
+                  false;
+              }
+
+          }else{
+           
+            false;
+
+          }
+
+          componentsToHide = document.getElementsByClassName('component');
+            for(let x = 0; x < componentsToHide.length; x++)
+                {
+                  componentsToHide[x].style.display = "none";
+                }
+          document.getElementsByClassName(clickedOption)[0].style.display = "block";
+         },
+
+
+
+     },
+    created()
+    {
+    
+    },  
+  
+});  
+
+
+</script>
+
+</body>
+</html>

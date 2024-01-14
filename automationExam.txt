@@ -1,0 +1,24 @@
+Hello 
+
+
+For manual testing: 
+Please access this site https://www.saucedemo.com and find bugs as many as you can. list all the bugs in excel file.  
+
+username: problem_user
+password: secret_sauce
+
+For Python Selenium automation testing: 
+please visit the website below:
+
+http://uitestingplayground.com/
+
+On this website, you will find artificial examples that emulate some 
+of the problems of real-life test automation projects. 
+Pick atleast 5 from the given examples and develop a script 
+that will record the scenarios.
+
+Deadline: June 24, 2022
+
+Thanks! 
+
+Good Luck 

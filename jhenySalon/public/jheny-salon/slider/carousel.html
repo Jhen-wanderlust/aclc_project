@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        
+        
+    <style>
+ 
+ 
+ 
+ 
+ /*RESPONSIVE*/
+@media (min-width: 768px){
+
+#certificate{
+    
+ width:400px;
+ margin:0 auto;
+ display:block;
+    
+}
+
+
+}
+
+
+@media (max-width: 500px){
+
+
+#certificate{
+    
+ width:400px;
+ margin:0 auto;
+ display:block;
+    
+}
+
+
+}
+
+
+/*RESPONSIVE*/
+
+    
+.carousel .carousel-item
+{
+ 
+ width:300px !important;
+    
+}
+
+    .carousel
+    {
+            margin: -170px 0px 0px 0px;
+            height:530px !important;
+    }
+    .carousel .carousel-item>img
+    {
+        border:solid 1px black;
+        border-radius:10px;
+        box-shadow: 0px 25px 15px -22px black;
+        
+    }
+    </style>    
+            <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="./carousel_files/materialize.min.css">
+
+
+<script src="./carousel_files/jquery-2.2.4.js.download" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="./carousel_files/materialize.min.js.download"></script>
+    
+
+        
+    </head>
+    <body>
+        
+        
+
+  <div class="carousel scrolling">
+    <a class="carousel-item" href="javascript:;" style="z-index: -2; opacity: 0.2; visibility: visible; transform: translateX(810px) translateY(165px) translateX(-600px) translateZ(-400px);"><img src="./carousel_files/1.jpg"></a>
+    <a class="carousel-item" href="javascript:;" style="transform: translateX(810px) translateY(165px) translateX(-300px) translateZ(-200px); z-index: -1; opacity: 0.6; visibility: visible;"><img src="./carousel_files/2.jpg"></a>
+    <a class="carousel-item active" href="javascript:;" style="transform: translateX(810px) translateY(165px) translateX(0px) translateX(0px) translateZ(0px); z-index: 0; opacity: 1; visibility: visible;"><img src="./carousel_files/3.jpg"></a>
+    <a class="carousel-item" href="javascript:;" style="transform: translateX(810px) translateY(165px) translateX(300px) translateZ(-200px); z-index: -1; opacity: 0.6; visibility: visible;"><img src="./carousel_files/4.jpg"></a>
+    <a class="carousel-item" href="javascript:;" style="transform: translateX(810px) translateY(165px) translateX(600px) translateZ(-400px); z-index: -2; opacity: 0.2; visibility: visible;"><img src="./carousel_files/5.jpg"></a>
+  </div>
+      
+        
+     <script>
+         
+         
+   $(document).ready(function(){
+  
+   $('.carousel').carousel();
+ 
+ /*  
+  setInterval(function(){
+   
+   $('.carousel').carousel('next');
+       
+   },2500);
+   
+});
+   
+   */
+   
+var myVar;   
+   
+function start(){
+myVar = setInterval(next, 2500); 
+function next() {
+  $('.carousel').carousel('next');
+}
+ 
+}
+
+function stopColor() {
+  clearInterval(myVar);
+}
+
+$('.carousel-item').mouseenter(function(){stopColor();}); 
+$('.carousel-item').mouseleave(function(){start();}); 
+ 
+start();
+   
+
+
+
+   });
+         
+         
+     </script>   
+        
+        
+        
+    
+</body></html>

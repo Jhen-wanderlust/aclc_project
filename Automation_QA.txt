@@ -1,0 +1,37 @@
+Hello QA Applicants 
+
+
+For Manual Testing: 
+
+  Hint: Find bugs on this Problematic e-commerce site.
+  List of Bugs must not be less than 3. 
+
+  https://www.saucedemo.com/
+
+  username:
+
+  problem_user
+
+  password:
+
+  secret_sauce
+
+For Automation Testing: 
+
+
+  http://uitestingplayground.com/
+
+  On this website, you will find artificial examples that emulate some 
+  of the problems of real-life test automation projects. 
+  Pick atleast 5 from the given examples and develop a script 
+  that will record the scenarios.
+  
+  Hint: You can use Javascript to complete this task.
+
+ Deadline: 
+
+ Thanks! 
+
+ Good Luck 
+
+

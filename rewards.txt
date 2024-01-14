@@ -1,0 +1,46 @@
+  //template 
+<div class="input-field col s6">
+                 <input id="reward" @change="rewardedPrice($event)" type="number"  v-model="customerReward" >
+                 <label for="reward" class="customerinfo">Reward Amount</label>
+                 <button  id="withdrawbtn" @click="[withdraw($event), retain($event)]" class="btn waves-effect waves-light">
+                 withdraw
+                 </button>
+                </div>
+
+//data
+
+ customerReward : "",
+
+//method
+
+    rewardedPrice(){
+        
+                  var totalR = document.getElementsByClassName('total-pay')[0].innerText;
+                  totalR = totalR;
+                  localStorage.setItem('totalR', totalR)
+                  var totalmn = Number(totalR) - Number(this.customerReward);
+                  var result = document.getElementsByClassName('total-pay')[0].innerText = Number(totalmn);
+                  
+                 this.totalPay = result;
+                 document.querySelector("#reward").disabled = true;
+                 document.querySelector("#withdrawbtn").disabled = false;
+          
+                },
+          
+                withdraw(){
+               
+                 document.querySelector("#reward").disabled = false;
+                 document.querySelector("#reward").value = null;
+              
+                },
+          
+                retain(){
+                  var retained = document.getElementsByClassName('total-pay')[0].innerText = Number(localStorage.getItem("totalR"));
+                  this.totalPay = retained;
+                  
+                },
+
+
+//onload
+
+ document.querySelector("#withdrawbtn").disabled = true;

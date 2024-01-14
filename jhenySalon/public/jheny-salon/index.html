@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"  name="jheny-salon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhenyLyn Salon</title>
+  
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+            
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/priceList.js"></script>
+    <script src="js/booking.js"></script>
+
+  
+
+
+</head>
+<body>
+    <div id="main">
+<!-------------------
+        NAVBAR
+-------------------->  
+
+          <nav>
+            <div class="nav-wrapper">
+
+              <a href="#" class="brand-logo center">JhenyLyn Salon</a>
+              <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large">
+                <a href="#" data-target="slide-out" id="hide"  @click="animationsCon = true" class="sidenav-trigger left show-on-large btn-floating btn-large cyan pulse" style="
+                display: inline-table;
+                position: absolute;
+                margin-top: 30px;
+                background-color: #cc64ff;">
+                <i class="material-icons">menu</i></a>
+              </a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              </ul>
+            </div>
+          </nav>
+
+
+<!-------------------
+      SIDENAV
+-------------------->  
+
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpeg">
+              </div>
+              <a href="#user"><img v-if="animationsCon" class="circle animated rotateIn" src="img/logo.jpg"></a>
+              <a href="#email"><span v-if="animationsCon" class="white-text email animated fadeInRight">jhenyangbutawan@gmail.com</span></a>
+            </div></li>
+            
+
+            <li v-for="link in links">
+              <a @click="changeContent" href="javascript:;" :id="link.id" v-if="animationsCon" class="waves-effect links animated fadeInLeft scale-transition">
+              
+                <i  class="material-icons-two-tone">{{ link.icon }}</i>
+                {{ link.title }}
+              </a>
+            </li>
+            <li>
+              <a id="linkfive" href="https://reservation-system-69ff9.web.app/app/app/index.html"  v-if="animationsCon" class="waves-effect links animated fadeInLeft" target="_blank">
+               <i class="material-icons">directions</i>
+                Nearby Salons
+              </a>
+            </li>        
+            <li>
+              <a id="linkhome"  v-if="animationsCon"  @click="home" class="waves-effect links animated fadeInLeft" >
+               <i class="material-icons">home</i>
+                Home
+              </a>
+            </li>                
+      
+
+<!----Button For Closing The SideNav-->            
+            <span><a @click="animationsCon = false" class="sidenav-close" href="javascript:;"></a></span>  
+
+          </ul>
+            
+          <section class="content">    
+            <booking :id="links[0].id"> </booking>
+            <pricelist :id="links[1].id"></pricelist>
+           
+          </section>
+         
+
+
+                  <div class="slider scale-transition">
+                    <ul class="slides scale-transition">
+                    <li>
+                        <img class="img-responsive"  src="slider/carousel_files/1.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption center-align scale-transition">
+                        <h1>Welcome Beauties</h1>
+                        <h1 class="light grey-text text-lighten-3">Avail {{ currentMonth }} Promos </h1>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-responsive"  src="slider/carousel_files/2.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption left-align scale-transition">
+                        <h1>Affordable Hair Packages</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-responsive" src="slider/carousel_files/3.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption right-align scale-transition">
+                        <h1>Exciting Discounts</h1>
+                        <h1 class="light grey-text text-lighten-3">On Selected Services</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-responsive"  src="slider/carousel_files/4.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption center-align scale-transition">
+                        <h1>Book Now!</h1>
+                        <h1 class="light grey-text text-lighten-3">Open at 9 am to 5 pm</h1>
+                        </div>
+                    </li>
+                    </ul>
+                    </div>
+
+                    
+                    <div class="parallax-container">
+                      <div class="parallax"></div>
+                    </div>
+                    <div class="section white">
+                      <div class="row container">
+                       
+                        <div class="container policy">
+                          <h2>
+                          Cancellation Policy
+                           </h2>
+                           <h4>
+                           We retains the right to cancel any appointment after 15 minutes of the service start time if you are 15+ minutes late. 
+                           Any appointment that is cancelled within a 24 hour period will not be charged. 
+                           We will contact the customer before the date booked.
+                           </h4>
+                          </div>
+  
+                      </div>
+                    </div>
+                    <div class="parallax-container">
+                      <div class="parallax"></div>
+                    </div>
+
+
+                 
+
+
+                      <div class="container">
+                        <h2>Hair Style Trends</h2>
+                      
+                        <input class="gallery__select" type="radio" name="gallery-select" id="0" checked="checked"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="1"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="2"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="3"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="4"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="5"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="6"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="7"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="8"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="9"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="10"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="11"/>
+                        <input class="gallery__select" type="radio" name="gallery-select" id="12"/>
+                        
+                        <div class="gallery">
+                          <div class="gallery__filler"></div>
+                          <div class="gallery__filler"></div>
+                          
+                          <label  class="gallery__item" for="0" >
+                           <img title="TOUSLED LOB" src="https://purewows3.imgix.net/images/articles/2018_05/tousled_lob_kendall_jenner35.jpg?auto=format,compress&cs=strip" alt="Something random"/>
+                          </label>
+                    
+                          <label  class="gallery__item" for="1">   <img  title="BUTTERFLY HAIRCUT" src="https://purewows3.imgix.net/images/articles/2022_03/best-haircuts-for-women-butterfly-haircut.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="2"> <img   title="OCTOPUS HAIRCUT" src="https://purewows3.imgix.net/images/articles/2022_03/best-haircuts-for-women-octopus-haircut.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="3"> <img  title="AIR BANGS" src="https://purewows3.imgix.net/images/articles/2022_03/best-haircuts-for-women-air-bangs.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="4"> <img  title="THE POWER BOB" src="https://purewows3.imgix.net/images/articles/2022_03/best-haircuts-for-women-power-bob.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="5"> <img  title="THE SHULLET" src="https://purewows3.imgix.net/images/articles/2022_03/best-haircuts-for-women-the-shullet.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="6"> <img  title="LONG PIXIE" src="https://purewows3.imgix.net/images/articles/2021_02/best-haircuts-for-women-long-pixie.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="7"> <img  title="SMOOTH LOB" src="https://purewows3.imgix.net/images/articles/2018_05/smooth_lob_haircut_mila_kunis6.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="8"> <img  title="CURTAIN BANGS"  src="https://purewows3.imgix.net/images/articles/2021_02/best-haircuts-for-women-curtain_bangs.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="9"> <img  title="A-LINE LOB" src="https://purewows3.imgix.net/images/articles/2018_05/aimee_song.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="10" > <img  title="ASYMMETRICAL BOB" src="https://purewows3.imgix.net/images/articles/2018_05/asymmetrical_bob_rose_byrne23.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="11"> <img title="LAYERED WITH CURTAIN BANGS" src="https://purewows3.imgix.net/images/articles/2018_05/layered_hair_with_curtain_bangs_jennifer_garner26.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                          <label   class="gallery__item" for="12"> <img title="CURLY BANGS" src="https://purewows3.imgix.net/images/articles/2018_05/curly_bangs_zendaya34.jpg?auto=format,compress&cs=strip" alt="Something random"/></label>
+                        </div>
+                        
+                      </div>
+
+       </div>     
+
+       <footer>
+
+        <div class="section white">
+          <div class="row container">
+           
+            <div class="container">
+                                  
+                                  
+              <h2>Contact Us</h2>
+          
+              <div class="slider contact">
+              
+                <h4><i class="material-icons-two-tone">phone</i><a  href="tel:+63-932-660-1641" >+63-932-660-1641</a></h4><hr class="hrhr">
+              
+                <h4><i class="material-icons-two-tone">alternate_email</i><a href="mailto:jhenyangbutawan@gmail.com" >jhenyanbutawan@gmail.com</a></h4><hr class="hrhr">
+              
+                <h4><i class="material-icons-two-tone">location_city</i>Mandaue City, Cebu, Philippines</h4><hr class="hrhr">
+          
+          
+              </div>
+              
+          
+                    <h2>Locate Us</h2>
+                    <div class="slider contact">
+                  
+                        <!--Google map-->
+                        <div style="width: 100%;margin-bottom: 140px;"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Mandaue%20City%20Cebu+(Jheny%20Salon)&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/wearable-gps/">wearable trackers</a></iframe></div>
+                        <!--Google Maps-->
+                        
+                  </div>
+             </div>
+          
+      
+          </div>
+        </div>
+       
+      </footer>
+      
+
+         
+<script>
+    
+ 
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+    var elems1 = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems1);
+    
+  });
+  
+ 
+
+ 
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+      currentMonth : '',
+      animationsCon : false,
+              links : [
+                            {title : "Booking", icon : "alarm", id : "linkone"},
+                            {title : "Services", icon : "attach_money",id : "linktwo"},
+                           
+                         
+                           
+                            
+                      ],
+    
+     },
+
+    methods :
+     {
+
+     home(){
+      location.reload();
+     },
+
+        changeContent(event)
+         {
+          // Close The NavBar 
+          document.getElementsByClassName('sidenav-close')[0].click();
+         
+
+          // Hide All The Components & Showing Only The Selected Component
+          
+          clickedOption = event.srcElement.id;
+          componentsToHide = document.getElementsByClassName('component');
+            for(let x = 0; x < componentsToHide.length; x++)
+                {
+                  componentsToHide[x].style.display = "none";
+                
+                }
+          document.getElementsByClassName(clickedOption)[0].style.display = "block";
+          
+          var element = document.getElementsByClassName("slider")[0];
+            element.setAttribute("class", "scale-out");
+          document.getElementsByClassName("slides")[0].style.display ='none';
+          document.getElementsByClassName('container policy')[0].style.display ='none';
+          document.getElementsByClassName('gallery')[0].style.display='none';
+          document.querySelectorAll('.contact.slider')[0].style.display = 'none';
+          document.querySelectorAll('.contact.slider')[1].style.display = 'none';
+          document.querySelectorAll('.section.white')[0].style.display= 'none';
+          document.querySelectorAll('.section.white')[1].style.display= 'none';
+          document.getElementsByTagName('h2')[1].innerHTML=null;
+          document.getElementsByTagName('h2')[2].innerHTML=null;
+          document.getElementsByTagName('h2')[3].innerHTML=null;
+          document.getElementsByTagName('h2')[4].innerHTML=null;
+          document.getElementsByTagName('h2')[5].innerHTML=null;
+     
+     
+
+         }, 
+     },
+    created()
+    {
+      // Fetching Date From Firebase
+      
+      this.$http.get("https://reservation-system-69ff9.firebaseio.com/whyus.json").then(function(data)
+      {
+        this.about = data.body;
+      });
+
+  
+      const localDate = new Date();
+      const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
+      let currentMonth = months[localDate.getMonth()];
+      this.currentMonth= currentMonth;
+      console.log(currentMonth);
+
+    
+   
+  
+   
+
+    }
+
+});  
+
+
+
+
+</script>
+
+</body>
+</html>

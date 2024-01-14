@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"  name="jheny-salon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhenyLyn Salon</title>
+  
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+            
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/priceList.js"></script>
+    <script src="js/booking.js"></script>
+
+  
+
+
+</head>
+<body>
+    <div id="main">
+<!-------------------
+        NAVBAR
+-------------------->  
+
+          <nav>
+            <div class="nav-wrapper">
+
+              <a href="#" class="brand-logo center">Salon App</a>
+              <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large">
+                <a href="#" data-target="slide-out" id="hide"  @click="animationsCon = true" class="sidenav-trigger left show-on-large btn-floating btn-large cyan pulse" style="
+                display: inline-table;
+                position: absolute;
+                margin-top: 30px;
+                background-color: #cc64ff;">
+                <i class="material-icons">menu</i></a>
+              </a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              </ul>
+            </div>
+          </nav>
+
+
+<!-------------------
+      SIDENAV
+-------------------->  
+
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpeg">
+              </div>
+              <a href="#user"><img v-if="animationsCon" class="circle animated rotateIn" src="img/logo.jpg"></a>
+              <a href="#email"><span v-if="animationsCon" class="white-text email animated fadeInRight">jhenyangbutawan@gmail.com</span></a>
+            </div></li>
+            
+
+            <li v-for="link in links">
+              <a @click="changeContent" href="javascript:;" :id="link.id" v-if="animationsCon" class="waves-effect links animated fadeInLeft scale-transition">
+              
+                <i  class="material-icons-two-tone">{{ link.icon }}</i>
+                {{ link.title }}
+              </a>
+            </li>
+            <li>
+              <a id="linkfive" href="https://reservation-system-69ff9.web.app/app/app/index.html"  v-if="animationsCon" class="waves-effect links animated fadeInLeft" target="_blank">
+               <i class="material-icons">directions</i>
+                Nearby Salons
+              </a>
+            </li>        
+            <li>
+              <a id="linkhome"  v-if="animationsCon"  @click="home" class="waves-effect links animated fadeInLeft" >
+               <i class="material-icons">home</i>
+                Home
+              </a>
+            </li>                
+      
+
+<!----Button For Closing The SideNav-->            
+            <span><a @click="animationsCon = false" class="sidenav-close" href="javascript:;"></a></span>  
+
+          </ul>
+            
+          <section class="content">    
+            <booking :id="links[0].id"> </booking>
+            <pricelist :id="links[1].id"></pricelist>
+            <whyus :id="links[2].id"></whyus>
+          </section>
+     
+
+                  <div class="slider scale-transition">
+                    <ul class="slides scale-transition">
+                    <li>
+                        <img class="img-responsive"  src="slider/carousel_files/3.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption center-align scale-transition">
+                        <h1>Welcome Beauties</h1>
+                        <h1 class="light grey-text text-lighten-3">Current Trends?</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-responsive"  src="slider/carousel_files/5.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption left-align scale-transition">
+                        <h1>It's Salon Appointment </h1>
+                        <h1 class="light grey-text text-lighten-3">And Management Solution</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-responsive" src="slider/carousel_files/4.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption right-align scale-transition">
+                        <h1>Choose Any</h1>
+                        <h1 class="light grey-text text-lighten-3">Web Designs</h1>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-responsive"  src="slider/carousel_files/3.jpg" alt="jheny-salon"> <!-- random image -->
+                        <div class="caption center-align scale-transition">
+                        <h1>Avail {{ currentMonth }} Discounts</h1>
+                        <h1 class="light grey-text text-lighten-3">Open at 9 am to 5 pm</h1>
+                        </div>
+                    </li>
+                    </ul>
+                    </div>
+
+                    
+
+    
+                    <div class="parallax-container">
+                      <div class="parallax"><img src="slider/carousel_files/6.jpg"></div>
+                    </div>
+                    <div class="section white">
+                      <div class="row container">
+                       
+                        <div class="container policy">
+                          <h2>
+                          About The Product
+                           </h2>
+                           <h4>
+                               A Salon Finder & management booking system can save you time, money, and energy. So these studies help us arrive at the ideal solution for salon business owners. How the system help salons improve and grow? 
+                            Every Salon has different answers. Some may have difficulties engaging and retaining customers. Others have been struggled with keeping the clients, since they may not return because appointments never start on time as stylists spend too long with previous customers. 
+                            So, implementing software for Salons can be an important tool to cope with the challenges. As the product features to solve the main problem on every Salon like online booking, find near Salons and Manage the business on the go as they can access the app through the latest version of android phones. 
+                            Implementing the software is a lifetime investment for every Salon Business owners as this software can help to get more customers through (SEO) Search engine optimization process that will boost the accountability and consistency of the customers to get into your Salon Website.
+                            Also, It is the most hassle-free app, designed for all registered users to manage the system anytime by themselves as long as they have an internet connection along the way. 
+                           </h4>
+                          </div>
+  
+                      </div>
+                    </div>
+                    <div class="parallax-container">
+                      <div class="parallax"><img src="slider/carousel_files/6.jpg"></div>
+                    </div>
+
+                   
+       </div>     
+
+
+<footer>
+
+  <div class="section white">
+    <div class="row container">
+     
+      <div class="container">
+                            
+                            
+        <h2>Contact Us</h2>
+    
+        <div class="slider contact">
+        
+          <h4><i class="material-icons-two-tone">phone</i><a  href="tel:+63-932-660-1641" >+63-932-660-1641</a></h4><hr class="hrhr">
+        
+          <h4><i class="material-icons-two-tone">alternate_email</i><a href="mailto:jhenyangbutawan@gmail.com" >jhenyanbutawan@gmail.com</a></h4><hr class="hrhr">
+        
+          <h4><i class="material-icons-two-tone">location_city</i>Mandaue City, Cebu, Philippines</h4><hr class="hrhr">
+    
+    
+        </div>
+        
+    
+              <h2>Locate Us</h2>
+              <div class="slider contact">
+            
+                  <!--Google map-->
+                  <div style="width: 100%;margin-bottom: 140px;"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Mandaue%20City%20Cebu+(Jheny%20Salon)&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/wearable-gps/">wearable trackers</a></iframe></div>
+                  <!--Google Maps-->
+                  
+            </div>
+       </div>
+    
+
+    </div>
+  </div>
+ 
+</footer>
+
+         
+<script>
+    
+ 
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+    var elems1 = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems1);
+    var elems2 = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems2, options);
+    
+  });
+  
+ 
+
+ 
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+      currentMonth : '',
+      animationsCon : false,
+              links : [
+                            {title : "Request", icon : "alarm", id : "linkone"},
+                            {title : "Services", icon : "attach_money",id : "linktwo"},
+                            {title : "WhyUs?", icon : "collections_bookmark",id : "linkthree"}
+                         
+                           
+                            
+                      ],
+    
+     },
+
+    methods :
+     {
+
+     home(){
+      location.reload();
+     },
+
+        changeContent(event)
+         {
+          // Close The NavBar 
+          document.getElementsByClassName('sidenav-close')[0].click();
+         
+
+          // Hide All The Components & Showing Only The Selected Component
+          
+          clickedOption = event.srcElement.id;
+          componentsToHide = document.getElementsByClassName('component');
+            for(let x = 0; x < componentsToHide.length; x++)
+                {
+                  componentsToHide[x].style.display = "none";
+                
+                }
+          document.getElementsByClassName(clickedOption)[0].style.display = "block";
+          
+          var element = document.getElementsByClassName("slider")[0];
+            element.setAttribute("class", "scale-out");
+          document.getElementsByClassName("slides")[0].style.display ='none';
+          document.getElementsByClassName('container policy')[0].style.display ='none';
+          document.getElementsByClassName('gallery')[0].style.display='none';
+          document.querySelectorAll('.contact.slider')[0].style.display = 'none';
+          document.querySelectorAll('.contact.slider')[1].style.display = 'none';
+          document.getElementsByTagName('h2')[1].innerHTML=null;
+          document.getElementsByTagName('h2')[2].innerHTML=null;
+          document.getElementsByTagName('h2')[3].innerHTML=null;
+          document.getElementsByTagName('h2')[4].innerHTML=null;
+          document.getElementsByTagName('h2')[5].innerHTML=null;
+     
+     
+
+         }, 
+     },
+    created()
+    {
+      // Fetching Date From Firebase
+      
+      this.$http.get("https://salon-management-system-598d0.firebaseapp.com/whyus.json").then(function(data)
+      {
+        this.about = data.body;
+      });
+
+  
+      const localDate = new Date();
+      const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
+      let currentMonth = months[localDate.getMonth()];
+      this.currentMonth= currentMonth;
+      console.log(currentMonth);
+
+    
+   
+  
+   
+
+    }
+
+});  
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

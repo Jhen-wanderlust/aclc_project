@@ -1,0 +1,3 @@
+Sitemap: https://reservation-system-69ff9.web.app/jheny-salon/sitemap.xml
+User-agent: *
+Disallow:

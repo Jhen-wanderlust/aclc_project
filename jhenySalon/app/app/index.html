@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Locator</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/salons.js"></script>
+
+
+</head>
+<body>
+    <div id="main">
+        
+<!-------------------
+      SIDENAV
+-------------------->  
+
+
+
+<iframe src="https://www.standalonedeveloper.eu/jheny/app/slider/carousel.html" width="100%" height="700px" scrolling="no" style="border:none;"></iframe>
+
+
+       <section class="content">     
+         <salons :id="links[4].id"></salons>
+       </section>
+    </div>
+            
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+  });
+  
+
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+      animationsCon : false,
+              links : [
+                            {title : "Booking", icon : "alarm",id : "linkone"},
+                            {title : "Price List", icon : "attach_money",id : "linktwo"},
+                            {title : "Why Us ?", icon : "assignment",id : "linkthree"},
+                            {title : "Contact Us", icon : "contacts",id : "linkfour"},
+                            {title : "Nearby Salons", icon : "directions",id : "linkfive"}
+                      ],
+              about : [],  
+             prices : []                     
+
+     },
+
+    created()
+    {
+        setTimeout(function(){
+
+          document.getElementsByClassName('linkfive')[0].style.display = "block";
+        },1000);
+
+       
+
+    }
+
+});  
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhenyLyn Salon</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/whyUs.js"></script>
+    <script src="js/priceList.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="https://www.standalonedeveloper.eu/pagnotta/easy_order/yeah/js/vue/contratti.js"></script>
+
+
+</head>
+<body>
+    <div id="main">
+    <contratti></contratti>    
+<!-------------------
+        NAVBAR
+-------------------->  
+
+          <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo center">JhenyLyn Salon</a>
+              <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large">
+                <i @click="animationsCon = true" class="btnn material-icons">menu</i>
+              </a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              </ul>
+            </div>
+          </nav>
+
+
+<!-------------------
+      SIDENAV
+-------------------->  
+
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpeg">
+              </div>
+              <a href="#user"><img v-if="animationsCon" class="circle animated rotateIn" src="img/logo.jpg"></a>
+              <a href="#name"><span v-if="animationsCon" class="white-text name animated fadeInRight">Jhenylyn</span></a>
+              <a href="#email"><span v-if="animationsCon" class="white-text email animated fadeInRight">jhenylyn@gmail.com</span></a>
+            </div></li>
+            
+
+            <li v-for="link in links">
+              <a @click="changeContent" href="javascript:;" :id="link.id" v-if="animationsCon" class="waves-effect links animated fadeInLeft">
+               <i class="material-icons-two-tone">{{ link.icon }}</i>
+                {{ link.title }}
+              </a>
+            </li>
+            <li>
+              <a id="linkfive" href="https://www.standalonedeveloper.eu/jheny/app/" v-if="animationsCon" class="waves-effect links animated fadeInLeft" target="_blank">
+               <i class="material-icons-two-tone">directions</i>
+                Nearby Salons
+              </a>
+            </li>                  
+      
+
+<!----Button For Closing The SideNav-->            
+            <span><a @click="animationsCon = false" class="sidenav-close" href="javascript:;"></a></span>  
+
+          </ul>
+          
+       <section class="content">    
+         <div class="fake component">Beauty Salon</div>    
+         <booking :id="links[0].id"></booking>
+         <pricelist :id="links[1].id"></pricelist>
+         <whyus :about="about" :id="links[2].id"></whyus>
+         <contact :id="links[3].id"></contact>
+       <section>
+    </div>
+         <iframe src="https://www.standalonedeveloper.eu/jheny/jheny-salon/slider/carousel.html" width="100%" height="300px" scrolling="no" style="border:none;"></iframe>               
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+  });
+  
+
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+      animationsCon : false,
+              links : [
+                            {title : "Booking", icon : "alarm",id : "linkone"},
+                            {title : "Services", icon : "attach_money",id : "linktwo"},
+                            {title : "Why Us ?", icon : "assignment",id : "linkthree"},
+                            {title : "Contact Us", icon : "contacts",id : "linkfour"}
+                      ],
+              about : []
+
+     },
+
+    methods :
+     {
+        changeContent(event)
+         {
+          // Close The NavBar 
+          document.getElementsByClassName('sidenav-close')[0].click();
+          
+          // Hide All The Components & Showing Only The Selected Component
+          clickedOption = event.srcElement.id;
+          componentsToHide = document.getElementsByClassName('component');
+            for(let x = 0; x < componentsToHide.length; x++)
+                {
+                  componentsToHide[x].style.display = "none";
+                }
+          document.getElementsByClassName(clickedOption)[0].style.display = "block";
+         }, 
+     },
+    created()
+    {
+      // Fetching Date From Firebase
+      
+      this.$http.get("https://reservation-system-69ff9.firebaseio.com/whyus.json").then(function(data)
+      {
+        this.about = data.body;
+      });
+    }
+
+});  
+
+
+
+
+</script>
+
+</body>
+</html>

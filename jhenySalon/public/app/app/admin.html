@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Locator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/admin.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- include the script -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <div id="main">
+   <!-------------------
+        NAVBAR
+-------------------->  
+
+<nav>
+
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">Super Admin Panel</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    
+      <li class="pin-bottom hide-on-med-and-down">
+        <!-- Back to top button -->
+        <a id="logout" @click="logout" data-target="slide-out">
+         <i class="btnn material-icons">logout</i>
+       </a>
+      
+      </li>
+
+    </ul>
+  
+  </div>
+
+</nav>
+
+
+       <section class="content">   
+         <admin>
+         </admin>
+       </section>
+    
+    </div>
+
+<script src="js/firebase.js"></script>       
+<script src="js/auth.js"></script>     
+
+
+
+<script>
+
+
+
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+      
+
+     },
+
+    methods :
+     {
+       
+      logout(){
+        let com = confirm('Would you like to logout?')
+        if (com == true){
+      
+          firebase.auth().signOut();
+          console.log('User signed out!');
+       
+          
+        }else{
+         false;
+         }
+      
+  
+
+ }
+
+
+     },
+    created()
+    {
+    
+    
+      
+    }
+  
+});  
+
+
+</script>
+
+</body>
+</html>
+
+

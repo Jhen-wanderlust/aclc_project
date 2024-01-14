@@ -1,0 +1,57 @@
+{
+  "rules": 
+     {
+    
+           "salons" : {
+                 ".read": true,
+                  ".write": "auth.uid === 'RHhrovvSnpTj4D8UtcUxe8jWsgz2'" 
+                      },
+
+    "jheny-salon" : {
+                              "services" : {
+                                  ".read": true,
+                                   // ".write": "auth.uid === 'RHhrovvSnpTj4D8UtcUxe8jWsgz2'" 
+                                    ".write": true 
+                                           },
+                          "appointments" : {
+                                  // ".read": "auth.id === 'LQUltT91upOxV5c9g1V2V5kE6R22'",
+                                   ".read" : true,
+                                   ".write": true 
+                                           },
+                  "appointmentReadable" : {
+                                  ".read": true ,
+                                   ".write": true 
+                                           },
+                                             
+                    "staff" : {
+                                  ".read": true ,
+                                   ".write": true 
+                                           } ,
+      
+   			    "staffavailable" : {
+                                  ".read": true ,
+                                   ".write": true 
+                                           }
+                      },
+                        
+                        
+                          
+           "prices" : {
+                 ".read": true,
+                  ".write": "auth.uid === 'bB6HKo7u7tP0J4BmkGEw0NaRTHj2'" 
+                      },    
+          // "whyus" : {
+                // ".read": true,
+                  //".write": "auth.uid === 'bB6HKo7u7tP0J4BmkGEw0NaRTHj2'" 
+                     // },
+           "salonsRequests" : {
+                 ".read": true,
+                  ".write": true
+                      },
+           "appointments" : {
+                 ".read": true,
+                  ".write": true
+                      }                    
+
+    }
+}

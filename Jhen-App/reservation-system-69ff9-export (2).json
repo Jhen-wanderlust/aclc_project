@@ -1,0 +1,581 @@
+{
+  "jheny-app": {
+    "appointmentReadable": {
+      "-MAus-tR6nu3xTqgdyoy": {
+        "date": "Jun 28, 2020",
+        "time": "10"
+      },
+      "-MAv0pm3nt2yy5z49f8i": {
+        "date": "Jun 29, 2020",
+        "time": "15"
+      },
+      "-MAv1BKLO58TbanEYL78": {
+        "date": "Jun 30, 2020",
+        "time": "13"
+      },
+      "-MB-8mSq5sFYlLnh2HPG": {
+        "date": "Jun 29, 2020",
+        "time": "14"
+      },
+      "-MB-F2sCL6p37Unn6Azs": {
+        "date": "Jun 29, 2020",
+        "time": "13"
+      },
+      "-MB-FltwNSgmZEPT1_Un": {
+        "date": "june 29, 2020",
+        "time": "10"
+      },
+      "-MB-GhzzcoQwOOZxjfbO": {
+        "date": "Jun 30, 2020",
+        "time": "11"
+      },
+      "-MB-HFvuOWEkOIrq8P13": {
+        "date": "oct 9 2020",
+        "time": "13"
+      },
+      "-MB-Hv6QmeNfWDF5Otu9": {
+        "date": "jhen",
+        "time": "13"
+      },
+      "-MB-JZSGdXdUVFGR9Me5": {
+        "date": "Jun 30, 2020",
+        "time": "9"
+      },
+      "-MB-KUv5BFxGF7Uc30Cw": {
+        "date": "Jun 30, 2020",
+        "time": "14"
+      },
+      "-MB-KmaKF1Cl163CPwB0": {
+        "date": "Jun 30, 2020",
+        "time": "10"
+      },
+      "-MB-KvaqDO0eUN8-jFe8": {
+        "date": "Jun 30, 2020",
+        "time": "12"
+      },
+      "-MB-L12pJGhSH0aGfLma": {
+        "date": "Jun 29, 2020",
+        "time": "12"
+      },
+      "-MB-TSqkFIb0-IkViION": {
+        "date": "june 30 2020",
+        "time": "12"
+      },
+      "-MB8nbI0aaOQIumLvStN": {
+        "date": "Jul 01, 2020",
+        "time": "9"
+      },
+      "-MB8wQBc_F6TZTfRVA8I": {
+        "date": "Jul 30, 2020",
+        "time": "13"
+      },
+      "-MB90yMbJoTu_Ude2YPK": {
+        "date": "Jul 01, 2020",
+        "time": "12"
+      },
+      "-MBF6P_966raMesP4TsT": {
+        "date": "Jul 30, 2020",
+        "time": "12"
+      },
+      "-MBFA6kHnrstoeqMZweH": {
+        "date": "Jul 02, 2020",
+        "time": "9"
+      },
+      "-MH_qyXLZ4M8n_Vn3SO9": {
+        "date": "Sep 19, 2020",
+        "time": "11"
+      },
+      "-MM_Hqi7zfO3t2N-idy3": {
+        "date": "Nov 24, 2020",
+        "time": "11"
+      },
+      "-MPYn6RU8zD7X94SE8uU": {
+        "date": "Dec 28, 2020",
+        "time": "12"
+      },
+      "-MPYnIbWGAFlHF0ede__": {
+        "date": "Dec 28, 2020",
+        "time": "11"
+      },
+      "-MVLjNcgQlCwfsI_gz-n": {
+        "date": "Mar 09, 2021",
+        "time": "11"
+      },
+      "-MayD-PBhj18M80AI26j": {
+        "date": "May 31, 2021",
+        "time": "12"
+      },
+      "-MiPiYdGi2UMuVXAPETF": {
+        "date": "Aug 31, 2021",
+        "time": "14"
+      },
+      "-MiPjilfRQUNLsHv4SRA": {
+        "date": "Aug 31, 2021",
+        "time": "12"
+      },
+      "-MiPjjhZLo8oOsP16uiV": {
+        "date": "Aug 31, 2021",
+        "time": "12"
+      },
+      "-MiRM1_xXd9K--ADDpht": {
+        "date": "Aug 31, 2021",
+        "time": "15"
+      },
+      "-Mq9GXPWy_682morLse_": {
+        "date": "Dec 08, 2021",
+        "time": "15"
+      },
+      "-Mu5au-ZX-3j-ml6nUbD": {
+        "date": "Jan 26, 2022",
+        "time": "15"
+      },
+      "-N2rGZkJpLXXRm-f_KTS": {
+        "date": "May 27, 2022",
+        "time": "14"
+      },
+      "-N2rGtNvUcDpENy5WxgY": {
+        "date": "May 27, 2022",
+        "time": "11"
+      },
+      "-N3ATZa7Wb1YzscINk25": {
+        "date": "May 30, 2022",
+        "time": "12"
+      },
+      "-N3AV2uluAURJp0K5dVD": {
+        "date": "May 30, 2022",
+        "time": "11"
+      },
+      "-N3Jm4IlRxNbU4VjEQyA": {
+        "date": "May 31, 2022",
+        "time": "11"
+      },
+      "-N3PdbQpaUR4MMhrzIoN": {
+        "date": "Jun 14, 2022",
+        "time": "14"
+      },
+      "-N3Pl8paJCtvvPiIWpmf": {
+        "date": "Jun 02, 2022",
+        "time": "9"
+      },
+      "-N3Pn6cIS6AeY2jrf0hi": {
+        "date": "Jun 22, 2022",
+        "time": "9"
+      },
+      "-N3PnlOqVVUlN6UPUeLM": {
+        "date": "Jun 29, 2022",
+        "time": "12"
+      },
+      "-N3PoKuenbbX2XeE4BsK": {
+        "date": "Jun 09, 2022",
+        "time": "13"
+      },
+      "-N3PpvkLTcv2YN_DkLsI": {
+        "date": "Jun 01, 2022",
+        "time": "9"
+      },
+      "-N3PwAMu4KfjoNYhMqoU": {
+        "date": "Jun 01, 2022",
+        "time": "10"
+      },
+      "-N3Q4ljf_hzb-XpRF2MP": {
+        "date": "Jun 01, 2022",
+        "time": "11"
+      },
+      "-N3QBBRmew_uu6BOp7mh": {
+        "date": "Jun 01, 2022",
+        "time": "12"
+      },
+      "-N3QDVINVjjlhcBmhMZY": {
+        "date": "Jun 01, 2022",
+        "time": "15"
+      },
+      "-N3QEFVEd51loh0DFoma": {
+        "date": "Jun 01, 2022",
+        "time": "13"
+      },
+      "-N3QFy8pMUUl7REmCndo": {
+        "date": "Jun 24, 2022",
+        "time": "11"
+      },
+      "-N3QG4pWaJaDvvbSiIEk": {
+        "date": "Jun 24, 2022",
+        "time": "13"
+      },
+      "-N3QIyJLcqRSNEU2FuEy": {
+        "date": "Jun 01, 2022",
+        "time": "14"
+      },
+      "-N3QKMKYjdZ-4V1FBhPG": {
+        "date": "Jun 30, 2022",
+        "time": "12"
+      },
+      "-N3RY2RZ31uQLcdCBdyj": {
+        "date": "Jun 30, 2022",
+        "time": "10"
+      },
+      "-N3RYXM258LmtRqpyn1Q": {
+        "date": "Jun 30, 2022",
+        "time": "14"
+      },
+      "-N3RZ4JdvKfrHaoE02-A": {
+        "date": "Jun 30, 2022",
+        "time": "13"
+      },
+      "-N3RZF8oGgz9PO8dDha3": {
+        "date": "Jun 29, 2022",
+        "time": "15"
+      },
+      "-N3R_8KzRd0xk8eF7dQX": {
+        "date": "Jun 01, 2022",
+        "time": "16"
+      },
+      "-N3VmbavWJtxI8yTUZ6-": {
+        "date": "Jun 23, 2022",
+        "time": "9"
+      },
+      "-N3W-gVj9e7lPca88Hvf": {
+        "date": "Jun 02, 2022",
+        "time": "14"
+      },
+      "-N3Wk4pVAUIu8TL36_SI": {
+        "date": "Jun 02, 2022",
+        "time": "13"
+      },
+      "-N3Wk4qROfLUtqs5igxX": {
+        "date": "Jun 02, 2022",
+        "time": "12"
+      },
+      "-N3Wl7pmPU6GAFIczFnx": {
+        "date": "Jun 02, 2022",
+        "time": "15"
+      },
+      "-N3eMiRbqQGxYVIrwISV": {
+        "date": "Jun 06, 2022",
+        "time": "10"
+      },
+      "-N3eNJaIZ6z5KGEyX8Mj": {
+        "date": "Jun 06, 2022",
+        "time": "12"
+      },
+      "-N3e_5hTnn6FeliGZIcq": {
+        "date": "Jun 05, 2022",
+        "time": "9"
+      },
+      "-N3eb_cym7isyS32VlSR": {
+        "date": "Jun 04, 2022",
+        "time": "10"
+      },
+      "-N3effHMl5dKLlln3huk": {
+        "date": "Jun 20, 2022",
+        "time": "12"
+      },
+      "-N3ehYYbKudgJwVN-Xps": {
+        "date": "Jun 20, 2022",
+        "time": "13"
+      },
+      "-N3ema41NnK5XbmO_N1c": {
+        "date": "Jun 24, 2022",
+        "time": "15"
+      },
+      "-N3etV8xW_Tqo7vcoxiv": {
+        "date": "Jun 14, 2022",
+        "time": "15"
+      },
+      "-N3etw94bdfw8H_0cnf2": {
+        "date": "Jun 28, 2022",
+        "time": "13"
+      },
+      "-N3nPVmb6a5hBR3F8tO5": {
+        "date": "Jun 06, 2022",
+        "time": "9"
+      },
+      "-N3o15Yk57-ORNf8BOch": {
+        "date": "Jun 06, 2022",
+        "time": "11"
+      },
+      "-N3o9Z8KLu6BfDFNkxQ_": {
+        "date": "Jun 06, 2022",
+        "time": "13"
+      },
+      "-N3vbmhOeyqvOktngYaB": {
+        "date": "Jun 13, 2022",
+        "time": "11"
+      },
+      "-N3vkkvYDUIWLABb4akw": {
+        "date": "Jun 13, 2022",
+        "time": "13"
+      },
+      "-N3vp9Z7QFh1XhJLHCTS": {
+        "date": "Jun 13, 2022",
+        "time": "10"
+      },
+      "-N3vpIkHuTSuOzvM2V9W": {
+        "date": "Jun 13, 2022",
+        "time": "12"
+      },
+      "-N3vpUEgSOvIV2gy5Qgl": {
+        "date": "Jun 13, 2022",
+        "time": "9"
+      },
+      "-N3vpeESftZgI5kfhtSH": {
+        "date": "Jun 13, 2022",
+        "time": "14"
+      },
+      "-N3vpkzrGvoOLas0xdry": {
+        "date": "Jun 13, 2022",
+        "time": "15"
+      },
+      "-N3vps7AOFFYBBIzuLw3": {
+        "date": "Jun 13, 2022",
+        "time": "16"
+      },
+      "-N3vq-LFNwqrdI-Kz7Ff": {
+        "date": "Jun 13, 2022",
+        "time": "17"
+      }
+    },
+    "appointments": {
+      "-N3etw0PylBry0sD378a": {
+        "customerName": "jhen",
+        "customerNmber": "2098",
+        "date": "Jun 28, 2022",
+        "services": [
+          "Rebond Brazillian",
+          "Rebond / Treatment"
+        ],
+        "status": "cancelled",
+        "time": "13",
+        "total": "2098",
+        "type": "appointment"
+      },
+      "-N3nPVefI2u_bmLygj_4": {
+        "customerName": "Maria rovilet",
+        "customerNmber": "09203144684",
+        "date": "Jun 06, 2022",
+        "services": [
+          "Rebond Brazillian",
+          "Rebond / Treatment",
+          "Rebond /Color/ Brazillian",
+          "Hair Cut"
+        ],
+        "status": "approved",
+        "time": "9",
+        "total": "3538",
+        "type": "appointment"
+      },
+      "-N3o15QJiMw2eR4GQZYo": {
+        "customerName": "Jhenylyn ",
+        "customerNmber": "0923837",
+        "date": "Jun 06, 2022",
+        "services": [
+          "Rebond Brazillian",
+          "Hair Cut",
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "11",
+        "total": "1484",
+        "type": "appointment"
+      },
+      "-N3o9X_znrO1uKdR4OSC": {
+        "customerName": "jhen",
+        "customerNmber": "093234",
+        "date": "Jun 06, 2022",
+        "services": [
+          "Rebond Brazillian",
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "13",
+        "total": "1484",
+        "type": "walkin"
+      },
+      "-N3vbmBzAILsXUUdaWL_": {
+        "customerName": "jhen",
+        "customerNmber": "0932333333",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "cancelled",
+        "time": "11",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vkkh65PqIVIpBEtUT": {
+        "customerName": "ggg",
+        "customerNmber": "444",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Hair Cut",
+          "Rebond /Color/ Brazillian"
+        ],
+        "status": "pending",
+        "time": "13",
+        "total": "1440",
+        "type": "appointment"
+      },
+      "-N3vp99DgtEILxiyK4TS": {
+        "customerName": "wwww",
+        "customerNmber": "222",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "10",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vpIS1csQs1fe-Piac": {
+        "customerName": "gg",
+        "customerNmber": "3333",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "12",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vpTzflOnp7br_CUyu": {
+        "customerName": "jhen",
+        "customerNmber": "2222",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "9",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vpe4YTplbvWSpfa14": {
+        "customerName": "3rr",
+        "customerNmber": "33333",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "14",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vpkboy0h2zFRpZojs": {
+        "customerName": "eee",
+        "customerNmber": "33333",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "15",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vpry3o3YS-hByVpMn": {
+        "customerName": "eee",
+        "customerNmber": "3333",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "16",
+        "total": "285",
+        "type": "appointment"
+      },
+      "-N3vpzTDyqr-s-Iy3PG6": {
+        "customerName": "www",
+        "customerNmber": "333",
+        "date": "Jun 13, 2022",
+        "services": [
+          "Foot Massage"
+        ],
+        "status": "pending",
+        "time": "17",
+        "total": "285",
+        "type": "appointment"
+      }
+    },
+    "services": {
+      "-N3VBOuzQCidMQkeSS0G": {
+        "category": "package 1",
+        "discount": "20",
+        "name": "Rebond Brazillian",
+        "price": "1499"
+      },
+      "-N3VBxHltVETYF5eU5Dt": {
+        "category": "package 2",
+        "discount": "10",
+        "name": "Rebond / Treatment",
+        "price": "999"
+      },
+      "-N3VCNNLdLC-k6s0DWov": {
+        "category": "package 3",
+        "discount": "20",
+        "name": "Rebond /Color/ Brazillian",
+        "price": "1800"
+      },
+      "-N3eWCdaQvXIAHyWaj_4": {
+        "category": "free",
+        "discount": "",
+        "name": "Hair Cut",
+        "price": "0"
+      },
+      "-N3o-m7uR3vVpGyy1_Tb": {
+        "category": "massage package",
+        "discount": "5",
+        "name": "Foot Massage",
+        "price": "300"
+      }
+    }
+  },
+  "salons": {
+    "0": {
+      "address": "esperanza",
+      "contactNumber": "0934-333-8785",
+      "salonName": "Salino",
+      "status": "activate",
+      "timetable": "03:04to16:05",
+      "weblink": "https://reservation-system-69ff9.web.app/jheny-salon/index.html"
+    },
+    "-N3VotAkyiCVhni03itY": {
+      "address": "esperanza",
+      "contactNumber": "0934-333-8785",
+      "salonName": "Salino",
+      "status": "activate",
+      "timetable": "03:04to16:05",
+      "weblink": "https://reservation-system-69ff9.web.app/index.html"
+    },
+    "-N3oDzc0qAEqiBlj8nrH": {
+      "address": "esperanza",
+      "contactNumber": "0934-333-8785",
+      "salonName": "Salino",
+      "status": "activate",
+      "timetable": "03:04 to 16:05",
+      "weblink": "https://reservation-system-69ff9.web.app/index.html"
+    }
+  },
+  "salonsRequests": {
+    "-N3CWlUKvorCdUOPtY8P": {
+      "address": "Esperanza",
+      "contactNumber": "1999",
+      "salonName": "Jhenskie",
+      "status": "deactivate",
+      "timetable": "9:00 am - 5:00 pm",
+      "weblink": "OUUUK"
+    },
+    "-N3o1iiIsgGVGfBO0MQw": {
+      "address": "Esperanza Agusan Del sur ",
+      "contactNumber": "09326601641",
+      "salonName": "Mysalon",
+      "status": "pending",
+      "timetable": "08:30am-18:30pm",
+      "weblink": "https://google.com",
+      "yourName": "Jhen"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhenyLyn Salon</title>
+    <!-- Start WOW Slider.com HEAD section -->
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <!-- End WOW Slider.com HEAD section -->
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/whyUs.js"></script>
+    <script src="js/priceList.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/booking.js"></script>
+
+
+</head>
+<body>
+    <div id="main">
+<!-------------------
+        NAVBAR
+-------------------->  
+
+          <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo center">JhenyLyn Salon</a>
+              <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large">
+                <i @click="animationsCon = true" class="btnn material-icons">menu</i>
+              </a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              </ul>
+            </div>
+          </nav>
+
+
+<!-------------------
+      SIDENAV
+-------------------->  
+
+
+        <ul id="slide-out" class="sidenav">
+            <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="img/bg.jpeg">
+              </div>
+              <a href="#user"><img v-if="animationsCon" class="circle animated rotateIn" src="img/logo.jpg"></a>
+              <a href="#name"><span v-if="animationsCon" class="white-text name animated fadeInRight">Jhenylyn</span></a>
+              <a href="#email"><span v-if="animationsCon" class="white-text email animated fadeInRight">jhenylyn@gmail.com</span></a>
+            </div></li>
+            
+
+            <li v-for="link in links">
+              <a @click="changeContent" href="javascript:;" :id="link.id" v-if="animationsCon" class="waves-effect links animated fadeInLeft">
+               <i class="material-icons-two-tone">{{ link.icon }}</i>
+                {{ link.title }}
+              </a>
+            </li>
+            <li>
+              <a id="linkfive" href="file:///C:/Users/Me/Desktop/Project_Proposal/jhenySalon/app/app/index.html"  v-if="animationsCon" class="waves-effect links animated fadeInLeft" target="_blank">
+               <i class="material-icons">directions</i>
+                Nearby Salons
+              </a>
+            </li>                  
+      
+
+<!----Button For Closing The SideNav-->            
+            <span><a @click="animationsCon = false" class="sidenav-close" href="javascript:;"></a></span>  
+
+          </ul>
+
+          <div v-if="isHidden" class="container">
+            <div v-if="isHidden" class="word w1">{{ currentMonth }} Promo </div>
+            <div v-if="isHidden"  class="word w2">Affordable<h1>Hair Packages</h1></div>
+            <div v-if="isHidden"  class="word w3">Free Hair Cut </div>
+            <div v-if="isHidden"  class="word w4">20% off<h1>On Selected Services</h1></div>
+            <div v-if="isHidden"  class="word w5">Book Now!</div>             
+          </div>
+          
+            <section   class="content">    
+              <div class="fake component">Beauty Salon</div>    
+              <booking @click="isHidden" :id="links[0].id"></booking>
+              <pricelist @click="isHidden" :id="links[1].id"></pricelist>
+              <whyus @click="isHidden" :about="about" :id="links[2].id"></whyus>
+              <contact @click="isHidden" :id="links[3].id"></contact>
+            </section>
+
+
+       
+
+      <section class="auto-slider">
+        <div id="slider">
+            <figure>
+                <img src="slider/carousel_files/1.jpg" alt="Image">
+                <img src="slider/carousel_files/2.jpg" alt="Image">
+                <img src="slider/carousel_files/3.jpg" alt="Image">
+                <img src="slider/carousel_files/4.jpg" alt="Image">
+                <img src="slider/carousel_files/5.jpg" alt="Image">
+            </figure>
+            <div class="indicator"></div>
+      </div>
+      </section>
+
+    </div>
+         
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {});
+    
+  });
+  
+  
+ 
+
+ 
+var app = new Vue({
+      el : '#main',
+    data : 
+     {
+      animationsCon : false,
+              links : [
+                            {title : "Booking", icon : "alarm",id : "linkone"},
+                            {title : "Services", icon : "attach_money",id : "linktwo"},
+                            {title : "Why Us ?", icon : "assignment",id : "linkthree"},
+                            {title : "Contact Us", icon : "contacts",id : "linkfour"}
+                      ],
+              about : [],
+              currentMonth : '',
+              isHidden :true
+
+     },
+
+    methods :
+     {
+
+      isHidden(){
+
+        this.isHidden = false;
+      },
+        changeContent(event)
+         {
+          // Close The NavBar 
+          document.getElementsByClassName('sidenav-close')[0].click();
+          
+          // Hide All The Components & Showing Only The Selected Component
+          clickedOption = event.srcElement.id;
+          componentsToHide = document.getElementsByClassName('component');
+            for(let x = 0; x < componentsToHide.length; x++)
+                {
+                  componentsToHide[x].style.display = "none";
+                }
+          document.getElementsByClassName(clickedOption)[0].style.display = "block";
+         }, 
+     },
+    created()
+    {
+      // Fetching Date From Firebase
+      
+      this.$http.get("https://reservation-system-69ff9.firebaseio.com/whyus.json").then(function(data)
+      {
+        this.about = data.body;
+      });
+
+      const localDate = new Date();
+      const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+      ];
+      let currentMonth = months[localDate.getMonth()];
+      this.currentMonth= currentMonth;
+      console.log(currentMonth);
+
+
+
+    }
+
+});  
+
+
+
+
+</script>
+
+</body>
+</html>

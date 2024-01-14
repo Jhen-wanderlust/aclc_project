@@ -1,0 +1,38 @@
+Authentication
+
+1. Securing app is identifying users. This process is called authentication.
+User identity is an important security concept. Different users have different data, and sometimes they have different capabilities. 
+
+Firebase Security Rules are the only safeguard blocking access for malicious users. 
+
+All authenticated users
+
+- to set access to any authenticated user while you're developing your app.
+
+example: 
+
+{
+  "rules": {
+    ".read": "auth.uid != null",
+    ".write": "auth.uid != null"
+  }
+}
+
+
+1. Realtime Database, create a data path that defines app's users 
+
+Content-owner only access - super admin side 
+
+These rules restrict access to the authenticated owner of the content only. The data is only readable and writable by one user, and the data path contains the user's ID.
+
+{
+  "rules": {
+    "some_path": {
+      "$uid": {
+        // Allow only authenticated content owners access to their data
+        ".read": "auth != null && auth.uid == $uid"
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    }
+  }
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="jheny-salon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JhenyLyn Salon</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="css/web.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/gallery.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src= "https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+
+    <script src="js/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    <script src="js/priceList.js"></script>
+    <script src="js/booking.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div id="main">
+        <!-------------------
+        NAVBAR
+-------------------->
+
+        <nav>
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="brand-logo right ">
+                    <li><a href="#item1" >About</a></li>
+                    <li><a href="#item2">Contact</a></li>
+                    <li><a href="https://reservation-system-69ff9.web.app/app/app/web.html">Find & Add Salon</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-------------------
+      Slider section
+-------------------->
+
+
+
+
+
+        <div class="slider scale-transition">
+            <ul class="slides scale-transition">
+                <li>
+                    <img class="img-responsive" src="slider/img/1.png" alt="jheny-salon"> <!-- random image -->
+                    <div class="caption right-align scale-transition">
+                        <h1>Welcome Beauties</h1>
+                        <h1 class="light grey-text text-lighten-3">A Wonderful {{ currentMonth }}</h1>
+                        <h1 class="light grey-text text-lighten-3">Deserves A lot of Clients</h1>
+                    </div>
+                </li>
+                <li>
+                    <img class="img-responsive" src="slider/img/2.jpeg" alt="jheny-salon">
+                    <!-- random image -->
+                    <div class="caption left-align scale-transition">
+                        <h1>Affordable</h1>
+                        <h1>Salon App</h1>
+                    </div>
+                </li>
+                <li>
+                    <img class="img-responsive" src="slider/img/44.jpeg" alt="jheny-salon">
+                    <!-- random image -->
+                    <div class="caption right-align scale-transition">
+                        <h1>Contact Us!</h1>
+                        <h1 class="light grey-text text-lighten-3">For Free Demonstration</h1>
+                    </div>
+                </li>
+                <li>
+                    <img class="img-responsive" src="slider/img/4.png" alt="jheny-salon">
+                    <!-- random image -->
+                    <div class="caption right-align scale-transition">
+                        <h1 class="light grey-text text-lighten-3"></h1>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-------------------
+      Parallax section
+-------------------->
+
+
+        <div class="parallax-container">
+            <div class="parallax"></div>
+        </div>
+        <div class="section white">
+            <div class="row container">
+
+                <div class="container policy">
+                    <h2>
+                        Salon App Objectives
+                    </h2>
+                    <h4>* To help customer finds the nearest salons.</h4>
+                    <h4>* To provide automated way of booking process and manage the time availability of staffs. </h4>
+                    <h4>* To enhance the market of the salon services through posting rewards and promos online.</h4>
+                    <h4>* To have fast data processing and achieve more customers as their salon will be visible on the search engine.</h4>
+                    <h4>* To help users make an appointment on the go.</h4>
+                    <h4>* To automate the manual reservation of salon.</h4>
+               
+                </div>
+
+            </div>
+        </div>
+        <div class="parallax-container">
+            <div class="parallax"></div>
+        </div>
+
+   <!-------------------
+      Parallax section
+-------------------->
+
+
+
+<div id="item0">
+    <div class="parallax-container">
+        <div class="parallax" ></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+   
+            <div class="container policy">
+                <h2>
+                    Salon App Features
+              </h2>
+                <h4>
+                        Customer Side Features
+                </h4>
+                
+                    <div class="row">
+
+
+                            <div class="col s4">
+                                <div class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="img/Picture2.png">
+                                    </div>
+                                    <div class="card-content">
+                                    <h2 class="card-title activator grey-text text-darken-4">Customer Welcome Page<i class="material-icons right">more_vert</i></h2>
+                         
+                                    </div>
+                                    <div class="card-reveal">
+                                    <h2 class="card-title grey-text text-darken-4">Customer Welcome Page<i class="material-icons right">close</i></h2>
+                                    <h6>The User will be redirected on this welcome page. The customer will see the salons contact and location information.</h6>
+                                    </div>
+                                </div>
+                            </div>
+            
+                     
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/Picture4.png">
+                                </div>
+                                <div class="card-content">
+                                <h2 class="card-title activator grey-text text-darken-4">Book Salon Services<i class="material-icons right">more_vert</i></h2>
+                     
+                                </div>
+                                <div class="card-reveal">
+                                <h2 class="card-title grey-text text-darken-4">Book Salon Services<i class="material-icons right">close</i></h2>
+                                <h6>Upon clicking the booking option on the sidebar, the user will redirect to the booking section to choose the services offered.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/Picture5.png">
+                                </div>
+                                <div class="card-content">
+                                <h2 class="card-title activator grey-text text-darken-4">View Services<i class="material-icons right">more_vert</i></h2>
+                     
+                                </div>
+                                <div class="card-reveal">
+                                <h2 class="card-title grey-text text-darken-4">View Services<i class="material-icons right">close</i></h2>
+                                <h6>The user can view the list of services with price. </h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/Picture6.png">
+                                </div>
+                                <div class="card-content">
+                                <h2 class="card-title activator grey-text text-darken-4">Responsive Sidebar Menu<i class="material-icons right">more_vert</i></h2>
+                     
+                                </div>
+                                <div class="card-reveal">
+                                <h2 class="card-title grey-text text-darken-4"> Responsive Sidebar Menu<i class="material-icons right">close</i></h2>
+                                <h6>The user need  to go to the side bar menu for them to select the options.</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/Picture7.png">
+                                </div>
+                                <div class="card-content">
+                                <h2 class="card-title activator grey-text text-darken-4">Find Nearby Salon<i class="material-icons right">more_vert</i></h2>
+                     
+                                </div>
+                                <div class="card-reveal">
+                                <h2 class="card-title grey-text text-darken-4">Find Nearby Salon<i class="material-icons right">close</i></h2>
+                                <h6>This will help your customer to find nearby salon, if the appointments is fully booked.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col s4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="img/Picture8.png">
+                                </div>
+                                <div class="card-content">
+                                <h2 class="card-title activator grey-text text-darken-4">Auto Computation<i class="material-icons right">more_vert</i></h2>
+                     
+                                </div>
+                                <div class="card-reveal">
+                                <h2 class="card-title grey-text text-darken-4"> Auto Computation<i class="material-icons right">close</i></h2>
+                                <h6>On booking side, there are fields needs to fill and the selected services will be computed automatically with Discounts or none.</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                    
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <h4> Admin Side Features</h4>
+
+                   <div class="row">
+
+                    <div class="col s4">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/Picture9.png">
+                            </div>
+                            <div class="card-content">
+                            <h2 class="card-title activator grey-text text-darken-4">Admin Welcome Page<i class="material-icons right">more_vert</i></h2>
+                 
+                            </div>
+                            <div class="card-reveal">
+                            <h2 class="card-title grey-text text-darken-4">Admin Welcome Page<i class="material-icons right">close</i></h2>
+                            <h6>After successful login, the admin user will redirect to the beautiful home page of the salon system. </h6>
+                            </div>
+                        </div>
+                    </div>
+    
+             
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/Picture10.png">
+                        </div>
+                        <div class="card-content">
+                        <h2 class="card-title activator grey-text text-darken-4">Admin Sidebar Menu<i class="material-icons right">more_vert</i></h2>
+             
+                        </div>
+                        <div class="card-reveal">
+                        <h2 class="card-title grey-text text-darken-4">Admin Sidebar Menu<i class="material-icons right">close</i></h2>
+                        <h6>The admin user has a sidebar menu.</h6>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/Picture11.png">
+                        </div>
+                        <div class="card-content">
+                        <h2 class="card-title activator grey-text text-darken-4">Add, Edit and Delete Services<i class="material-icons right">more_vert</i></h2>
+             
+                        </div>
+                        <div class="card-reveal">
+                        <h2 class="card-title grey-text text-darken-4">Add, Edit and Delete Services<i class="material-icons right">close</i></h2>
+                        <h6>The admin user is required to add services. </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/Picture12.png">
+                        </div>
+                        <div class="card-content">
+                        <h2 class="card-title activator grey-text text-darken-4">Admin Booking Section<i class="material-icons right">more_vert</i></h2>
+             
+                        </div>
+                        <div class="card-reveal">
+                        <h2 class="card-title grey-text text-darken-4"> Admin Booking Section<i class="material-icons right">close</i></h2>
+                        <h6>Once the customer successfully sent the request, the pending request will show up on admin side. Admin can check pending request, can be able to approved or cancel, archived and delete request</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/Picture13.png">
+                        </div>
+                        <div class="card-content">
+                        <h2 class="card-title activator grey-text text-darken-4">  Walk-In Request <i class="material-icons right">more_vert</i></h2>
+             
+                        </div>
+                        <div class="card-reveal">
+                        <h2 class="card-title grey-text text-darken-4">  Walk-In Request <i class="material-icons right">close</i></h2>
+                        <h6>The admin can use the application for Walk-In Customer. The data should be filled on the walk-in section.</h6>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col s4">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="img/Picture14.png">
+                        </div>
+                        <div class="card-content">
+                        <h2 class="card-title activator grey-text text-darken-4">Manage Staffs<i class="material-icons right">more_vert</i></h2>
+             
+                        </div>
+                        <div class="card-reveal">
+                        <h2 class="card-title grey-text text-darken-4"> Manage Staffs<i class="material-icons right">close</i></h2>
+                        <h6>The admin can add, edit and delete stylist data. Admin should use the drag and drop to manage the stylist time availability.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                   </div>
+              
+            </div>
+    
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"></div>
+    </div>
+
+</div>
+
+
+<div id="item1">
+    <div class="parallax-container">
+        <div class="parallax" ></div>
+    </div>
+    <div class="section white">
+        <div class="row container">
+    
+            <div class="container policy">
+                <h2>
+                    About Us
+                </h2>
+                <h4>The aspiring students/developers from ACLC College of Mandaue.</h4>
+                <h4>We are inspired to develop a Salon Booking & Management System, that offers a digital solution like online booking and management system.</h4> 
+                <h4>We ensure that we will provide optimization, availability, ultimate flexibility to clients via using our applications.</h4>
+                <h2>
+                    Recommendations
+                </h2>
+                 <h4>Everything can be customize to the brand look and feel. </h4>
+                 <h4>The project will be implemented once approved and downpayment is required.</h4>      
+                 <h4>Customization of a functionality that the system not covered yet will be upon discussion.</h4>  
+                 <h4>After a system walkthrough to the clients, Any recommendation about the system will be highly appreciated.</h4> 
+               
+            </div>
+    
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"></div>
+    </div>
+
+</div>
+
+        <!-------------------
+        Select Image section
+-------------------->
+
+
+    <footer>
+
+        <div id="item2">
+
+            <div class="section white">
+                <div class="row container">
+    
+                    <div class="container">
+    
+    
+                        <h2>Contact Us</h2>
+    
+                        <div class="slider contact">
+    
+                            <h4><i class="material-icons-two-tone">phone</i><a
+                                    href="tel:+63-932-660-1641">+63-932-660-1641</a></h4>
+                            <hr class="hrhr">
+    
+                            <h4><i class="material-icons-two-tone">alternate_email</i><a
+                                    href="mailto:jhenyangbutawan@gmail.com">jhenyangbutawan@gmail.com</a></h4>
+                            <hr class="hrhr">
+    
+                            <h4><i class="material-icons-two-tone">location_city</i>Mandaue City, Cebu, Philippines</h4>
+                            <hr class="hrhr">
+
+                            <h4><i class="material-icons-two-tone">business_center</i>
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FjhenylynbutawanSEARCHBOX%2Fposts%2Fpfbid0XAEz1SDoc5pX35gfdKTY8snVJs4HcKzHuMxAJ5vBhXN728zobaHPiFP8rvGVxk6Ll&show_text=true&width=500" width="500" height="452" style="border:none;overflow:hidden;position: center;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </h4>
+                            <hr class="hrhr">
+    
+                        </div>
+
+            
+    
+    
+                        <h2>Locate Us</h2>
+                        <div class="slider contact">
+    
+                            <!--Google map-->
+                            <div style="width: 100%;margin-bottom: 140px;"><iframe width="100%" height="600" frameborder="0"
+                                    scrolling="no" marginheight="0" marginwidth="0"
+                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Mandaue%20City%20Cebu+(Jheny%20Salon)&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                        href="https://www.gps.ie/wearable-gps/">wearable trackers</a></iframe></div>
+                            <!--Google Maps-->
+    
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+            <h5 style="position:center-align" >Copyright © 2022 All Rights Reserved</h5>
+        </div>
+     
+    </footer>
+
+
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {});
+            var elems1 = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems1);
+
+        });
+
+
+
+
+        var app = new Vue({
+            el: '#main',
+            data:
+            {
+                currentMonth: '',
+                animationsCon: false,
+                links: [
+                    { title: "Booking", icon: "alarm", id: "linkone" },
+                    { title: "Services", icon: "attach_money", id: "linktwo" },
+
+
+                ],
+
+            },
+
+            methods:
+            {
+
+           
+                home() {
+                    location.reload();
+                },
+
+                changeContent(event) {
+                    // Close The NavBar 
+                    document.getElementsByClassName('sidenav-close')[0].click();
+
+
+                    // Hide All The Components & Showing Only The Selected Component
+
+                    clickedOption = event.srcElement.id;
+                    componentsToHide = document.getElementsByClassName('component');
+                    for (let x = 0; x < componentsToHide.length; x++) {
+                        componentsToHide[x].style.display = "none";
+
+                    }
+                    document.getElementsByClassName(clickedOption)[0].style.display = "block";
+
+                    var element = document.getElementsByClassName("slider")[0];
+                    element.setAttribute("class", "scale-out");
+                    document.getElementsByClassName("slides")[0].style.display = 'none';
+                    document.getElementsByClassName('container policy')[0].style.display = 'none';
+                    document.getElementsByClassName('gallery')[0].style.display = 'none';
+                    document.querySelectorAll('.contact.slider')[0].style.display = 'none';
+                    document.querySelectorAll('.contact.slider')[1].style.display = 'none';
+                    document.querySelectorAll('.section.white')[0].style.display = 'none';
+                    document.querySelectorAll('.section.white')[1].style.display = 'none';
+                    document.getElementsByTagName('h2')[1].innerHTML = null;
+                    document.getElementsByTagName('h2')[2].innerHTML = null;
+                    document.getElementsByTagName('h2')[3].innerHTML = null;
+                    document.getElementsByTagName('h2')[4].innerHTML = null;
+                    document.getElementsByTagName('h2')[5].innerHTML = null;
+
+
+
+                },
+            },
+            created() {
+                // Fetching Date From Firebase
+
+                this.$http.get("https://reservation-system-69ff9.firebaseio.com/whyus.json").then(function (data) {
+                    this.about = data.body;
+                });
+
+
+                const localDate = new Date();
+                const months = [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October',
+                    'November',
+                    'December',
+                ];
+                let currentMonth = months[localDate.getMonth()];
+                this.currentMonth = currentMonth;
+                console.log(currentMonth);
+
+
+
+
+
+
+            }
+
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>
